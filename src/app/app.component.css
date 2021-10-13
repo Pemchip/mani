@@ -1,0 +1,99 @@
+.has-search .form-control {
+    padding-left: 2.375rem;
+    }
+    .has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+    }
+    
+    element.style {
+    margin-right: 1.5rem!important;
+    }
+    .has-search .form-control {
+    padding-left: 2.375rem;
+    }
+    @media (min-width: 787px)
+    {
+    .form-inline .form-control {
+      width: inherit!important;
+    }
+    
+    }
+    
+    @media (max-width: 620px){
+    
+    .btn-mob{
+    margin: 10px!important;
+    }
+    .has-search{
+    margin-bottom: 10px !important;
+    }
+    .btn-search{
+    width: 100% !important;
+    }
+    .image-card{
+    text-align:center !important;
+    }
+    .text-card{
+    text-align: center !important;
+    }
+    .btn-card{
+    text-align: center !important;
+    width: 100% !important;
+    }
+    .nav-logo{
+    padding-left: 0px !important;
+    }
+    
+    
+    }
+    
+    
+    @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    .form-inline .form-control{
+    
+    width: 100% !important;
+    
+    }
+    .card-ipad{
+    width: max-content !important;
+     padding: 20px !important;
+    }
+    }
+    
+    
+    .doc-sec{
+    padding: 10px;
+    }
+    .card{
+      border: 0px solid rgba(0,0,0,.125)!important;
+    }
+    
+    h3{
+    color:#fff !important;
+    }
+    .p1{
+    color:#fff !important;
+    
+    }
+    h6{
+    color:white !important;
+    }
+    
+    .nav-logo{
+    padding-left: 90px ;
+    }
+    
+    small{
+    
+    font-weight: bold  !important;
+    color: #fff !important;
+    }
+    

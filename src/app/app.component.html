@@ -1,0 +1,139 @@
+ <body>
+
+    <section class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" >
+           <a class="navbar-brand nav-logo" href="#"><img height="45" src="../assets/images/logo1.PNG"></a>
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span class="navbar-toggler-icon"></span>
+           </button>
+           <div class="collapse navbar-collapse" id="navbarSupportedContent">
+           </div>
+         </nav>
+    </section>
+
+
+    <section>
+     <div class="container-fluid " style="background-color:#132941; padding-bottom:50px; padding-top:10px;">
+       <div class="container">
+       <h3>Find your doctor</h3>
+       <p class="">Search your doctor by name, location specialization.</p>
+       <div class="row" style="padding-bottom:20px;">
+
+       <form class="form-inline col-12 p-0" [formGroup]="searchForm" >
+         <div class="col-md-3 has-search">
+           <span class="fa fa-search form-control-feedback"></span>
+          <input formControlName="doctor" class="form-control mr-sm-2" type="search" placeholder="Doctor Name" aria-label="Search" style="margin-right: 2.5rem!important">
+         </div>
+
+         <div class="col-md-3 has-search">
+          <span class="fas fa-file-alt form-control-feedback pl-2">Location</span>
+         <select placeholder="Doctor Name" formControlName="location" class="form-control mr-sm-2" >
+           <option *ngFor="let keyValue of list" [value]="keyValue.location">{{keyValue.location}}</option>
+         </select>
+        </div>
+
+         <div class="col-md-3 has-search">
+           <span class="fas fa-file-alt form-control-feedback pl-2">Specialization</span>
+          <select formControlName="specialization" class="form-control mr-sm-2" >
+            <option *ngFor="let keyValue of list" [value]="keyValue.specialization">{{keyValue.specialization}}</option>
+          </select>
+         </div>
+
+         <div class="col-md-3">
+         <button style="width: 40%;" (click)="submit()" class="btn  btn-success my-2 my-sm-0 btn-search" type="submit">Search</button> &nbsp;
+         <button style="width: 40%;" (click)="cancel()" class="btn  btn-success my-2 my-sm-0 btn-search" type="submit">Cancel</button>
+       </div>
+      </form>
+     
+     </div>
+     
+     <div class="row"  >
+       <div style="padding-left:12px;">
+           <h6>MOST SEARCHED CITIES</h6>
+           <br>
+         <button style="border-radius:30px;line-height: 1;" type="button" class="btn btn-light btn-mob">Light</button> &nbsp;
+         <button style="border-radius:30px;line-height: 1;" type="button" class="btn btn-light btn-mob">Light</button>&nbsp;
+         <button style="border-radius:30px;line-height: 1;" type="button" class="btn btn-light btn-mob">Light</button>&nbsp;
+         <button style="border-radius:30px;line-height: 1;" type="button" class="btn btn-light btn-mob">Light</button>&nbsp;
+         <button style="border-radius:30px;line-height: 1;" type="button" class="btn btn-light btn-mob">Light</button>&nbsp;
+         <button style="border-radius:30px;line-height: 1;" type="button" class="btn btn-light btn-mob">Light</button>&nbsp;
+       </div>
+     </div>
+
+     </div>
+     </div>
+    </section>
+
+    
+       <section class="doc-sec container-fluid">
+         <div class="container">
+         <div class="row" >
+           <div class="col-md-8">
+             <h4 style="color: black;">Top Doctors on docexa</h4>
+            <p>Trusted by top doctors around the globe.</p>
+           </div>
+               <div class="col-md-4" style="text-align:right;">
+                 <p style="color: black;"><strong>Details</strong></p>
+               </div>
+     
+           </div>
+         </div>
+       </section>
+       <section  class="container-fluid">
+         <div class="container">
+
+
+         <div class="row" >
+          <ng-container *ngFor="let item of list">
+           <div class="col-sm-6">
+               <div class="">
+                 <div class="row" >
+                   <div class="col-sm-6 col-md-3 image-card" >
+                     <img style="width:100px; height:100px; border-radius:50%;" class="card-img" [src]="item.img" alt="Card image"/>
+                   </div>
+                   <div class="col-sm-6 col-md-6" >
+                     <div class="card-body-right text-card card-ipad" >
+                       <h4 class="card-title ">{{item.doctorName}}</h4>
+                       <p >{{item.specialization}}</p>
+                       <p ><b> {{item.location}} </b></p>
+                     </div>
+                      </div>
+                   </div>
+                 </div>
+               </div>
+               <div class="col-sm-6" style="text-align:right; margin-top:25px;">
+               <button type="button" class="btn btn-success btn-card">Book a appointment</button>
+               </div>
+           <hr style=" width:100%">
+           </ng-container>
+         </div>
+     
+     
+     
+       <div style="text-align:center; margin:50px;">
+       <button style="background-color:gray; color:white;" type="button" class="btn btn-light btn-card">Load More</button>
+       </div>
+     
+       </div>
+     
+       </section>
+       <footer id="sticky-footer" style="background-color:#295388;" class="flex-shrink-0 py-4 text-white-50">
+         <div class="container">
+           <div class="row">
+           <div class="col-md-4 text-center">
+           <small>&copy;2021 Dexace, All right reserved</small>
+         </div >
+         <div class="col-md-4 text-center">
+         <small>+912249452012</small>
+       </div >
+       <div class="col-md-4 text-center">
+       <small>docexa@globalspace.in</small>
+     </div >
+       </div>
+       </div>
+       </footer>
+     
+     
+     </body>
+ 
+     
